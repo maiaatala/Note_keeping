@@ -104,6 +104,7 @@ sudo snap install --classic code
 - prettier
 - vscode-icons
 - docker
+- HTML to CSS autocompletion
 
 #### Json:
 
