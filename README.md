@@ -105,6 +105,8 @@ sudo snap install --classic code
 - vscode-icons
 - docker
 - HTML to CSS autocompletion
+- omni theme
+- better comments
 
 #### Json:
 
@@ -112,7 +114,7 @@ sudo snap install --classic code
 {
     /* VSCODE STUFF */
     "workbench.iconTheme": "vscode-icons",
-    "workbench.colorTheme": "Dracula",
+    "workbench.colorTheme": "Omni",
     "editor.formatOnSave": true,
     "editor.bracketPairColorization.enabled": true,
     "editor.guides.bracketPairs": "active",
@@ -132,6 +134,8 @@ sudo snap install --classic code
     "emmet.showSuggestionsAsSnippets": true,
     "editor.rename.enablePreview": false,
     "vsicons.dontShowNewVersionMessage": true,
+    "workbench.experimental.layoutControl.enabled" : true,
+    "workbench.experimental.layoutControl.type": "both",
 
     /* FILES STUFF */
     "files.exclude": {
@@ -163,8 +167,28 @@ sudo snap install --classic code
     // "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     // "kite.showWelcomeNotificationOnStartup": false,
 
+    /* IDENT RAINBOW */
+    "indentRainbow.colorOnWhiteSpaceOnly": true,
+    "indentRainbow.colors": [
+        // "rgba(255,255,64,0.07)",
+        // "rgba(127,255,127,0.07)",
+        // "rgba(255,127,255,0.07)",
+        // "rgba(79,236,236,0.07)"
+        // "rgba(255, 0 , 0,0.3)",
+
+        "rgba(255, 184, 108 ,0.15)",
+        "rgba(255, 117, 181 ,0.15)",
+        "rgba(69, 169, 249 ,0.15)",
+        "rgba(176, 132, 235 ,0.15)",
+        "rgba(230, 230, 230 ,0.15)",
+        "rgba(25, 249, 216 ,0.15)",
+
+    ],
+
+
+
     /* PRETTIER AND WEB DEV STUFF */
-    "prettier.tabWidth": 4,
+    "prettier.tabWidth": 2,
     "auto-close-tag.SublimeText3Mode": true,
     "emmet.includeLanguages": {
         "javascript": "javascriptreact",
@@ -173,23 +197,24 @@ sudo snap install --classic code
     "[javascript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode",
         "editor.formatOnSave": true,
-        "editor.tabSize": 4,
+        "editor.tabSize": 2,
     },
     "[html]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode",
         "editor.formatOnSave": true,
-        "editor.tabSize": 4,
+        "editor.tabSize": 2,
     },
     "[css]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode",
         "editor.formatOnSave": true,
-        "editor.tabSize": 4,
+        "editor.tabSize": 2,
     },
     "[typescript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode",
         "editor.formatOnSave": true,
-        "editor.tabSize": 4,
+        "editor.tabSize": 2,
     },
+    
     // "npm.enableScriptExplorer": true,
 }
 ```
