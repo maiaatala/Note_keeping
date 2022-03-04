@@ -140,7 +140,6 @@ sudo snap install --classic code
     /* FILES STUFF */
     "files.exclude": {
         "**/*.exe": true,
-        "**/*.json": true,
         "**/__pycache__": true,
     },
 
