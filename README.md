@@ -11,6 +11,7 @@
   - [Discord](#discord)
   - [Spotify](#spotify)
   - [Vivaldi](#vivaldi)
+  - [Firefox](#firefox)
   - [Vs Code](#vs-code)
     - [Extentions List:](#extentions-list)
     - [Json:](#json)
@@ -86,6 +87,10 @@ sudo auto-cpufreq --install
 sudo pip install s-tui
 sudo apt install stress
 s-tui
+## view power govenors
+cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_available_governors
+## view the program running
+auto-cpufreq --stats
 ```
 
 /etc/auto-cpufreq.conf file reads:
@@ -94,19 +99,19 @@ s-tui
 [charger]
 # see available governors by running: cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_available_governors
 # preferred governor.
-governor = powersave
+governor = conservative
 
 # minimum cpu frequency (in kHz)
 # example: for 800 MHz = 800000 kHz --> scaling_min_freq = 800000
 # see conversion info: https://www.rapidtables.com/convert/frequency/mhz-to-hz.html
 # to use this feature, uncomment the following line and set the value accordingly
-scaling_min_freq = 1400000
+# scaling_min_freq = 1400000
 
 # maximum cpu frequency (in kHz)
 # example: for 1GHz = 1000 MHz = 1000000 kHz -> scaling_max_freq = 1000000
 # see conversion info: https://www.rapidtables.com/convert/frequency/mhz-to-hz.html
 # to use this feature, uncomment the following line and set the value accordingly
-scaling_max_freq = 2900000
+# scaling_max_freq = 2900000
 
 # turbo boost setting. possible values: always, auto, never
 turbo = auto
@@ -121,13 +126,13 @@ governor = powersave
 # example: for 800 MHz = 800000 kHz --> scaling_min_freq = 800000
 # see conversion info: https://www.rapidtables.com/convert/frequency/mhz-to-hz.html
 # to use this feature, uncomment the following line and set the value accordingly
-scaling_min_freq = 1400000
+# scaling_min_freq = 1400000
 
 # maximum cpu frequency (in kHz)
 # see conversion info: https://www.rapidtables.com/convert/frequency/mhz-to-hz.html
 # example: for 1GHz = 1000 MHz = 1000000 kHz -> scaling_max_freq = 1000000
 # to use this feature, uncomment the following line and set the value accordingly
-scaling_max_freq = 2900000
+# scaling_max_freq = 2900000
 
 # turbo boost setting. possible values: always, auto, never
 turbo = auto
@@ -155,6 +160,13 @@ snap install spotify
 https://vivaldi.com/download/
 ```zsh
 sudo apt install ./vivaldi_download_name.deb
+```
+
+### Firefox
+```zsh
+sudo apt install ffmpeg
+sudo apt install ubuntu-restricted-extras
+sudo apt install libavcodec-extra
 ```
 
 ### Vs Code
