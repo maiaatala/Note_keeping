@@ -61,6 +61,11 @@ sudo apt install hddtemp lm-sensors
 hddtemp
 sensors
 ```
+
+### Ram memory
+```zsh
+sudo dmidecode --type 17 
+```
 ___
 
 ## Other Software Instalation
@@ -304,14 +309,16 @@ sudo apt-get install gcc g++ make
 ## build-essentials
 sudo apt-get install -y build-essential
 #####
-npx create-react-app my-app
-cd my-app
-npm start
+# npx create-react-app my-app
+# cd my-app
+# npm start
+sudo npm install tar@6 -g
 ```
 
 #### Yarn
 ```zsh
 npm install --global yarn
+# yarn create react-app my-app
 ```
 or
 ```zsh
