@@ -6,6 +6,7 @@
 - [Summary](#summary)
 - [instaling zsh](#instaling-zsh)
 - [Easy Hardware Sensors](#easy-hardware-sensors)
+  - [Ram memory](#ram-memory)
 - [Other Software Instalation](#other-software-instalation)
   - [Discord](#discord)
   - [Spotify](#spotify)
@@ -61,6 +62,7 @@ sudo apt install hddtemp lm-sensors
 hddtemp
 sensors
 ```
+
 install display with: https://extensions.gnome.org/extension/841/freon/
 
 ### Ram memory
