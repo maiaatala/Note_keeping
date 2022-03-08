@@ -61,6 +61,7 @@ sudo apt install hddtemp lm-sensors
 hddtemp
 sensors
 ```
+install display with: https://extensions.gnome.org/extension/841/freon/
 
 ### Ram memory
 ```zsh
