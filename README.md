@@ -7,6 +7,7 @@
 - [instaling zsh](#instaling-zsh)
 - [Easy Hardware Sensors](#easy-hardware-sensors)
   - [Ram memory](#ram-memory)
+- [Cpu too hot, help!](#cpu-too-hot-help)
 - [Other Software Instalation](#other-software-instalation)
   - [Discord](#discord)
   - [Spotify](#spotify)
@@ -67,9 +68,12 @@ install display with: https://extensions.gnome.org/extension/841/freon/
 
 ### Ram memory
 ```zsh
-<<<<<<< Updated upstream
 sudo dmidecode --type 17 
-=======
+```
+
+## Cpu too hot, help!
+
+```zsh
 #bench test
 sudo apt install hardinfo
 sudo apt-get install gcc python3-dev
@@ -139,7 +143,6 @@ governor = powersave
 # turbo boost setting. possible values: always, auto, never
 turbo = auto
 # turbo = never
->>>>>>> Stashed changes
 ```
 ___
 
