@@ -150,7 +150,7 @@ ___
 
 ### Discord
 ```zsh
-sudo snap instal discord
+sudo snap install discord
 ```
 
 ps: if discord bugs on the preview:
@@ -346,6 +346,9 @@ sudo apt install gcc
 
 ### Python
 ```zsh
+sudo apt install software-properties-common -y
+sudo add-apt-repository ppa:deadsnakes/ppa
+sudo apt install python3.10
 sudo apt install libpq-dev python3-dev
 sudo apt-get install python3-distutils
 sudo apt-get install python3.10-distutils
