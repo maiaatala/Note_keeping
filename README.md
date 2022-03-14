@@ -12,6 +12,7 @@
   - [Discord](#discord)
   - [Spotify](#spotify)
   - [Vivaldi](#vivaldi)
+  - [Firefox](#firefox)
   - [Vs Code](#vs-code)
     - [Extentions List:](#extentions-list)
     - [Json:](#json)
@@ -170,9 +171,19 @@ https://vivaldi.com/download/
 sudo apt install ./vivaldi_download_name.deb
 ```
 
+### Firefox
+```zsh
+sudo add-apt-repository multiverse
+sudo apt install ubuntu-restricted-extras
+```
+
 ### Vs Code
 ```zsh
 sudo snap install --classic code
+# sudo apt autoremove ubuntu-restricted-extras
+sudo apt install ffmpeg
+sudo apt install libavcodec-extra
+
 ```
 
 #### Extentions List:
