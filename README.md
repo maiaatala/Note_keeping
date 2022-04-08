@@ -201,114 +201,128 @@ sudo apt install libavcodec-extra
 - HTML to CSS autocompletion
 - omni theme
 - better comments
+- esLint
 
 #### Json:
 
 ```json
 {
-    /* VSCODE STUFF */
-    "workbench.iconTheme": "vscode-icons",
-    "workbench.colorTheme": "Omni",
+  /* VSCODE STUFF */
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.colorTheme": "Omni",
+  "editor.formatOnSave": true,
+  "editor.formatOnType": false,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": "active",
+  "editor.tabSize": 4,
+  "editor.suggestSelection": "first",
+  "editor.mouseWheelZoom": true,
+  "breadcrumbs.enabled": false,
+  "editor.renderWhitespace": "none",
+  "explorer.confirmDelete": false,
+  "editor.acceptSuggestionOnEnter": "off",
+  "explorer.confirmDragAndDrop": false,
+  "editor.glyphMargin": false, //no debugger
+  "editor.folding": true,
+  "terminal.integrated.fontFamily": "MesloLGS NF",
+  "window.menuBarVisibility": "toggle",
+  "editor.snippetSuggestions": "top",
+  "emmet.showSuggestionsAsSnippets": true,
+  "editor.rename.enablePreview": false,
+  "vsicons.dontShowNewVersionMessage": true,
+  "workbench.experimental.layoutControl.enabled": true,
+  "workbench.experimental.layoutControl.type": "both",
+  // !LEFT SIDE MINI MAP
+  "editor.minimap.enabled": false,
+
+  // * FILES STUFF
+  "files.exclude": {
+    "**/*.exe": true,
+    "**/__pycache__": true
+},
+
+  // * PYTHON STUFF
+  "python.formatting.provider": "black",
+  "python.formatting.blackArgs": ["-t", "py37"],
+  "python.linting.flake8Args": [
+    "--ignore=E501",
+    "perFile-ignores = __init__py:F401"
+  ],
+  // // "[markdown]": {
+  // //     "editor.defaultFormatter": "tehnix.vscode-tidymarkdown"
+  // // },
+
+  // * C STUFF
+  "[c]": {
+    "editor.formatOnSave": false
+  },
+
+  // * KITE STUFF
+  // "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  // "kite.showWelcomeNotificationOnStartup": false,
+
+  // * INDENT RAINBOW STUFF
+  "indentRainbow.colorOnWhiteSpaceOnly": true,
+  "indentRainbow.colors": [
+    // "rgba(255,255,64,0.07)",
+    // "rgba(127,255,127,0.07)",
+    // "rgba(255,127,255,0.07)",
+    // "rgba(79,236,236,0.07)"
+    // "rgba(255, 0 , 0,0.3)",
+
+    "rgba(255, 184, 108 ,0.15)",
+    "rgba(255, 117, 181 ,0.15)",
+    "rgba(69, 169, 249 ,0.15)",
+    "rgba(176, 132, 235 ,0.15)",
+    "rgba(230, 230, 230 ,0.15)",
+    "rgba(25, 249, 216 ,0.15)"
+  ],
+
+  // * PRETTIER AND WEB DEV STUFF
+  "javascript.validate.enable": false,
+  "typescript.validate.enable": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "eslint.enable": true,
+  "eslint.quiet":true,
+  "eslint.validate": ["javascript", "javascriptreact", "typescript"],
+  "eslint.run":"onSave",
+
+  "prettier.tabWidth": 2,
+  "auto-close-tag.SublimeText3Mode": true,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true,
-    "editor.bracketPairColorization.enabled": true,
-    "editor.guides.bracketPairs": "active",
-    "editor.tabSize": 4,
-    "editor.suggestSelection": "first",
-    "editor.mouseWheelZoom": true,
-    "breadcrumbs.enabled": false,
-    "editor.renderWhitespace": "none",
-    "explorer.confirmDelete": false,
-    "editor.acceptSuggestionOnEnter": "off",
-    "explorer.confirmDragAndDrop": false,
-    "editor.glyphMargin": false, //no debugger
-    "editor.folding": true,
-    "terminal.integrated.fontFamily": "MesloLGS NF",
-    "window.menuBarVisibility": "toggle",
-    "editor.snippetSuggestions": "top",
-    "emmet.showSuggestionsAsSnippets": true,
-    "editor.rename.enablePreview": false,
-    "vsicons.dontShowNewVersionMessage": true,
-    "workbench.experimental.layoutControl.enabled" : true,
-    "workbench.experimental.layoutControl.type": "both",
+    "editor.tabSize": 2,
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2
+  },
+  "[sass]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2
+  },
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "liveServer.settings.donotShowInfoMsg": true
 
-    /* FILES STUFF */
-    "files.exclude": {
-        "**/*.exe": true,
-        "**/__pycache__": true,
-    },
-
-    /* PYTHON STUFF */
-    "python.formatting.provider": "black",
-    "python.formatting.blackArgs": [
-        "-t",
-        "py37"
-    ],
-    "python.linting.flake8Args": [
-        "--ignore=E501",
-        "perFile-ignores = __init__py:F401"
-    ],
-    // "[markdown]": {
-    //     "editor.defaultFormatter": "tehnix.vscode-tidymarkdown"
-    // },
-
-    /* C STUFF */
-    "[c]": {
-        "editor.formatOnSave": false,
-    },
-
-    /* KITE STUFF */
-    // "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    // "kite.showWelcomeNotificationOnStartup": false,
-
-    /* IDENT RAINBOW */
-    "indentRainbow.colorOnWhiteSpaceOnly": true,
-    "indentRainbow.colors": [
-        // "rgba(255,255,64,0.07)",
-        // "rgba(127,255,127,0.07)",
-        // "rgba(255,127,255,0.07)",
-        // "rgba(79,236,236,0.07)"
-        // "rgba(255, 0 , 0,0.3)",
-
-        "rgba(255, 184, 108 ,0.15)",
-        "rgba(255, 117, 181 ,0.15)",
-        "rgba(69, 169, 249 ,0.15)",
-        "rgba(176, 132, 235 ,0.15)",
-        "rgba(230, 230, 230 ,0.15)",
-        "rgba(25, 249, 216 ,0.15)",
-
-    ],
-
-
-
-    /* PRETTIER AND WEB DEV STUFF */
-    "prettier.tabWidth": 2,
-    "auto-close-tag.SublimeText3Mode": true,
-    "emmet.includeLanguages": {
-        "javascript": "javascriptreact",
-
-    },
-    "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.formatOnSave": true,
-        "editor.tabSize": 2,
-    },
-    "[html]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.formatOnSave": true,
-        "editor.tabSize": 2,
-    },
-    "[css]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.formatOnSave": true,
-        "editor.tabSize": 2,
-    },
-    "[typescript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.formatOnSave": true,
-        "editor.tabSize": 2,
-    },
-    
-    // "npm.enableScriptExplorer": true,
+  // //  "npm.enableScriptExplorer": true,
 }
 ```
 
