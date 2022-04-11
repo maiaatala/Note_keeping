@@ -230,8 +230,9 @@ sudo apt install libavcodec-extra
   "emmet.showSuggestionsAsSnippets": true,
   "editor.rename.enablePreview": false,
   "vsicons.dontShowNewVersionMessage": true,
-  "workbench.experimental.layoutControl.enabled": true,
-  "workbench.experimental.layoutControl.type": "both",
+  "workbench.layoutControl.enabled": true,
+  "workbench.layoutControl.type": "both",
+  "editor.colorDecorators": true,
   // !LEFT SIDE MINI MAP
   "editor.minimap.enabled": false,
 
@@ -288,11 +289,12 @@ sudo apt install libavcodec-extra
   "eslint.quiet":true,
   "eslint.validate": ["javascript", "javascriptreact", "typescript"],
   "eslint.run":"onSave",
-
   "prettier.tabWidth": 2,
+  "prettier.semi": false,
   "auto-close-tag.SublimeText3Mode": true,
   "emmet.includeLanguages": {
-    "javascript": "javascriptreact"
+    "javascript": "javascriptreact",
+    "HTML": "html",
   },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -319,8 +321,14 @@ sudo apt install libavcodec-extra
     "editor.formatOnSave": true,
     "editor.tabSize": 2
   },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2
+  },
   "javascript.updateImportsOnFileMove.enabled": "always",
-  "liveServer.settings.donotShowInfoMsg": true
+  "liveServer.settings.donotShowInfoMsg": true,
+
 
   // //  "npm.enableScriptExplorer": true,
 }
