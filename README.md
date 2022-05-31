@@ -202,6 +202,7 @@ sudo apt install libavcodec-extra
 - omni theme
 - better comments
 - esLint
+- https://github.com/tonsky/FiraCode
 
 #### Json:
 
@@ -209,7 +210,7 @@ sudo apt install libavcodec-extra
 {
   /* VSCODE STUFF */
   "workbench.iconTheme": "vscode-icons",
-  "workbench.colorTheme": "Omni",
+  "workbench.colorTheme": "Omni Owl",
   "editor.formatOnSave": true,
   "editor.formatOnType": false,
   "editor.bracketPairColorization.enabled": true,
@@ -233,6 +234,11 @@ sudo apt install libavcodec-extra
   "workbench.layoutControl.enabled": true,
   "workbench.layoutControl.type": "both",
   "editor.colorDecorators": true,
+  "editor.fontLigatures": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.organizeImports": true
+  },
   // !LEFT SIDE MINI MAP
   "editor.minimap.enabled": false,
 
@@ -240,7 +246,7 @@ sudo apt install libavcodec-extra
   "files.exclude": {
     "**/*.exe": true,
     "**/__pycache__": true
-},
+  },
 
   // * PYTHON STUFF
   "python.formatting.provider": "black",
@@ -282,24 +288,21 @@ sudo apt install libavcodec-extra
   // * PRETTIER AND WEB DEV STUFF
   "javascript.validate.enable": false,
   "typescript.validate.enable": false,
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
-  },
   "eslint.enable": true,
-  "eslint.quiet":true,
+  "eslint.quiet": true,
   "eslint.validate": ["javascript", "javascriptreact", "typescript"],
-  "eslint.run":"onSave",
+  "eslint.run": "onSave",
   "prettier.tabWidth": 2,
   "prettier.semi": false,
   "auto-close-tag.SublimeText3Mode": true,
   "emmet.includeLanguages": {
     "javascript": "javascriptreact",
-    "HTML": "html",
+    "HTML": "html"
   },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true,
-    "editor.tabSize": 2,
+    "editor.tabSize": 2
   },
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -328,7 +331,7 @@ sudo apt install libavcodec-extra
   },
   "javascript.updateImportsOnFileMove.enabled": "always",
   "liveServer.settings.donotShowInfoMsg": true,
-
+  "editor.fontFamily": "'Fira Code', 'monospace', monospace"
 
   // //  "npm.enableScriptExplorer": true,
 }
