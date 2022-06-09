@@ -202,7 +202,8 @@ sudo apt install libavcodec-extra
 - omni theme
 - better comments
 - esLint
-- https://github.com/tonsky/FiraCode
+- https://github.com/tonsky/F
+- -change
 
 #### Json:
 
