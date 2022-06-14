@@ -8,12 +8,12 @@
 - [Easy Hardware Sensors](#easy-hardware-sensors)
   - [Ram memory](#ram-memory)
 - [Cpu too hot, help!](#cpu-too-hot-help)
+- [cpu still too hot cuz no hardware acceleration](#cpu-still-too-hot-cuz-no-hardware-acceleration)
 - [Other Software Instalation](#other-software-instalation)
   - [Discord](#discord)
   - [Spotify](#spotify)
   - [Vivaldi](#vivaldi)
   - [Firefox](#firefox)
-  - [Vs Code](#vs-code)
     - [Extentions List:](#extentions-list)
     - [Json:](#json)
   - [Github For Desktop](#github-for-desktop)
@@ -147,6 +147,19 @@ turbo = auto
 ```
 ___
 
+## cpu still too hot cuz no hardware acceleration
+
+```zsh
+sudo apt install mpv
+### firefox
+# https://addons.mozilla.org/en-US/firefox/addon/send-to-mpv-player/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search
+# click on the extension, download the zip and install it
+### chrome
+# https://chrome.google.com/webstore/detail/play-with-mpv/hahklcmnfgffdlchjigehabfbiigleji/related
+# https://github.com/Thann/play-with-mpv
+
+```
+
 ## Other Software Instalation
 
 ### Discord
@@ -173,17 +186,17 @@ sudo apt install ./vivaldi_download_name.deb
 
 ### Firefox
 ```zsh
-sudo add-apt-repository multiverse
+sudo apt install firefox
+sudo apt install ffmpeg
+sudo add-apt-repository universe
 sudo apt install ubuntu-restricted-extras
-```
+sudo apt install libavcodec-extra
+```s
+
 
 ### Vs Code
 ```zsh
 sudo snap install --classic code
-# sudo apt autoremove ubuntu-restricted-extras
-sudo apt install ffmpeg
-sudo apt install libavcodec-extra
-
 ```
 
 #### Extentions List:
@@ -201,9 +214,6 @@ sudo apt install libavcodec-extra
 - HTML to CSS autocompletion
 - omni theme
 - better comments
-- esLint
-- https://github.com/tonsky/F
-- -change
 
 #### Json:
 
@@ -216,7 +226,7 @@ sudo apt install libavcodec-extra
   "editor.formatOnType": false,
   "editor.bracketPairColorization.enabled": true,
   "editor.guides.bracketPairs": "active",
-  "editor.tabSize": 4,
+  "editor.tabSize": 2,
   "editor.suggestSelection": "first",
   "editor.mouseWheelZoom": true,
   "breadcrumbs.enabled": false,
@@ -240,7 +250,7 @@ sudo apt install libavcodec-extra
     "source.fixAll.eslint": true,
     "source.organizeImports": true
   },
-  // !LEFT SIDE MINI MAP
+  // !RIGHT SIDE MINI MAP
   "editor.minimap.enabled": false,
 
   // * FILES STUFF
@@ -293,6 +303,9 @@ sudo apt install libavcodec-extra
   "eslint.quiet": true,
   "eslint.validate": ["javascript", "javascriptreact", "typescript"],
   "eslint.run": "onSave",
+  "eslint.rules.customizations": [
+    { "rule": "*", "severity": "warn" }
+  ],
   "prettier.tabWidth": 2,
   "prettier.semi": false,
   "auto-close-tag.SublimeText3Mode": true,
@@ -383,9 +396,6 @@ sudo apt install gcc
 
 ### Python
 ```zsh
-sudo apt install software-properties-common -y
-sudo add-apt-repository ppa:deadsnakes/ppa
-sudo apt install python3.10
 sudo apt install libpq-dev python3-dev
 sudo apt-get install python3-distutils
 sudo apt-get install python3.10-distutils
