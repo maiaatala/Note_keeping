@@ -55,6 +55,31 @@
     - [Questão 3 - Localidade](#questão-3---localidade)
       - [Resposta](#resposta-17)
     - [REM e RDM, BE, BD, BC](#rem-e-rdm-be-bd-bc)
+- [Parallel Systems](#parallel-systems)
+  - [History](#history)
+  - [Amdahl's law and Gustafson's law](#amdahls-law-and-gustafsons-law)
+  - [Data Dependencies](#data-dependencies)
+  - [Flynn's taxonomy](#flynns-taxonomy)
+  - [Types of parallelism](#types-of-parallelism)
+    - [Bit-level parallelism](#bit-level-parallelism)
+    - [Instruction-level parallelism](#instruction-level-parallelism)
+    - [Task parallelism](#task-parallelism)
+    - [Superword level parallelism](#superword-level-parallelism)
+  - [Memory and communication](#memory-and-communication)
+  - [Classes of Parallel computers](#classes-of-parallel-computers)
+    - [Multi-core computing](#multi-core-computing)
+    - [Symmetric multiprocessing](#symmetric-multiprocessing)
+    - [Distributed computing](#distributed-computing)
+    - [Cluster computing](#cluster-computing)
+    - [Massively parallel computing](#massively-parallel-computing)
+    - [Grid computing](#grid-computing)
+    - [Specialized parallel computers](#specialized-parallel-computers)
+    - [Vector processors](#vector-processors)
+- [Distributed Computing](#distributed-computing-1)
+  - [Parallel and distributed computing](#parallel-and-distributed-computing)
+  - [History](#history-1)
+  - [Architeture](#architeture)
+- [links](#links)
 
 
 ## Classificacoes de computador
@@ -385,3 +410,59 @@ Utilizando estes dois princípios, é possivel escolher os pequenos grupos de in
 - BE: Barramento de Endereço: Interliga a CPU a memoria de forma uniderecional, transfere os bits que significam um endereço
 - BD: Barramento de Dados: Interliga a CPU a memoria de forma bidirecional, transfere os dados contidos no endereço de memoria nas operações de write/read
 - BC: Barramento de Controle: Interliga a CPU a memoria de forma bidirecional, a CPU manda o sinal de leitura/escrita, a memoria manda sinal de wait
+
+
+# Parallel Systems
+
+> Paralelismo e o objetivo e sistemas distribuidos e uma das formas de chegar no objetivo.
+Joao Vilela
+
+um sistema pode ser parelelo sem ser distribuido, mas nao pode ser distribuido sem ser paralelo ?
+
+## History
+
+## Amdahl's law and Gustafson's law
+
+## Data Dependencies
+
+## Flynn's taxonomy
+
+## Types of parallelism
+
+### Bit-level parallelism
+### Instruction-level parallelism
+### Task parallelism
+### Superword level parallelism
+
+## Memory and communication
+
+## Classes of Parallel computers
+
+### Multi-core computing
+### Symmetric multiprocessing
+### Distributed computing
+### Cluster computing
+### Massively parallel computing
+### Grid computing
+### Specialized parallel computers
+### Vector processors
+
+
+# Distributed Computing
+
+## Parallel and distributed computing
+## History
+## Architeture
+
+
+>>> In the past, when someone needed to solve bigger problems they could often wait a bit, and a faster computer would come out. This was mainly due to Moore's law, which people interpreted to mean that the speed of computers would double about every two years. However, this isn't true any longer: if you look at the GHz speed of the processors in a desktop computer 2 years ago, versus the speed now, it has barely, if any, increased. Basically this happened because they can't make reliable low-cost processors that run significantly faster.
+>>>What has doubled, however, is the number of processors on a single chip. Some smartphones now have 8 cores (processors), you can buy CPU chips with 12 cores, and this number will soon increase. Even the Apple watch now has 2 cores. These are called "multi-core" or "many-core" chips. There are also graphics processing units (GPUs) with over 1000 highly specialized processors. This is closer to what Moore was talking about, because what he really said was that the number of transistors would keep doubling. The rate of improvement is slowing down, but significant increases in the number of transistors should continue for at least a decade.
+https://web.eecs.umich.edu/~qstout/parallel.html
+
+# links
+https://www.heavy.ai/technical-glossary/parallel-computing#:~:text=Parallel%20computing%20refers%20to%20the,part%20of%20an%20overall%20algorithm
+https://www.splunk.com/en_us/data-insider/what-are-distributed-systems.html
+https://blog.stackpath.com/distributed-system/
+https://en.wikipedia.org/wiki/Parallel_computing
+https://en.wikipedia.org/wiki/Distributed_computing
+https://web.eecs.umich.edu/~qstout/parallel.html
